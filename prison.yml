@@ -1,0 +1,5 @@
+# Allowed commands in the prison
+white-list:
+- '/g'
+- '/s'
+- '/global'

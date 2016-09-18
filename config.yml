@@ -1,0 +1,40 @@
+# General Settings
+Settings:
+  health-bars: 10
+  hit-damage: 1
+  regen-amount: 1
+  regen-delay: 30
+  stun-duration: 60
+  default-jail-time: 10
+  default-rule: none
+  default-report: 'N/A'
+  log-cd: 5
+  sensor-limit: 20
+  law-url-base: 'http://www.mc-gtb.com/forum/m/5827961/viewthread/'
+  category-url-base: 'http://www.mc-gtb.com/forum/m/5827961/viewforum/'
+  pre-commands:
+  - 'say &6%p &2has been jailed by &6%j&2!'
+  - 'ejail %p 10m'
+  jail-commands:
+  - 'eunjail %p'
+  - 'ejail %p %t'
+  cancel-commands:
+  - 'eunjail %p'
+  sensor-permissions:
+  - worldedit.selection.hpos
+  - worldedit.selection.expand
+  - logblock.lookup
+  sensor-commands:
+  - '/hpos1'
+  - '/hpos2'
+  - '/expand 5 5 N'
+  - '/expand 5 5 E'
+  - '/expand 5 5 U'
+  - 'lb sel since %d'
+  shift-sensor-commands:
+  - '/hpos1'
+  - '/hpos2'
+  - '/expand 5 5 N'
+  - '/expand 5 5 E'
+  - '/expand 5 5 U'
+  - 'lb sel since %d chestaccess'

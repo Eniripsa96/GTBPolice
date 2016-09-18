@@ -1,0 +1,107 @@
+name: Police
+main: com.sucy.police.Police
+version: 1.0
+author: Eniripsa96
+
+commands:
+  record:
+  prison:
+  wanted:
+  law:
+  police:
+  sensor:
+
+permissions:
+  police.baton:
+    default: op
+  police.stun:
+    default: op
+  police.sensor:
+    default: op
+
+  police.record.report:
+    default: op
+  police.record.lookup:
+    default: op
+  police.record.remove:
+    default: op
+  police.record.close:
+    default: op
+  police.record.open:
+    default: op
+  police.record.list:
+    default: op
+  police.record.delete:
+    default: op
+  police.record.*:
+    default: op
+    children:
+      police.record.report: true
+      police.record.lookup: true
+      police.record.remove: true
+      police.record.close: true
+      police.record.open: true
+      police.record.list: true
+      police.record.delete: true
+
+  police.wanted.list:
+    default: op
+  police.wanted.add:
+    default: op
+  police.wanted.remove:
+    default: op
+  police.wanted.info:
+    default: op
+  police.wanted.*:
+    default: op
+    children:
+      police.wanted.list: true
+      police.wanted.add: true
+      police.wanted.remove: true
+      police.wanted.info: true
+
+  police.prison.start:
+    default: op
+  police.prison.respawn:
+    default: op
+  police.prison.send:
+    default: op
+  police.prison.release:
+    default: op
+  police.prison.*:
+    default: op
+    children:
+      police.prison.start: true
+      police.prison.respawn: true
+      police.prison.send: true
+      police.prison.release: true
+
+  police.law.add:
+    default: op
+  police.law.list:
+    default: true
+  police.law.remove:
+    default: op
+  police.law.edit:
+    default: op
+  police.law.category:
+    default: op
+  police.law.*:
+    default: op
+    children:
+      police.law.add: true
+      police.law.list: true
+      police.law.category: true
+      police.law.remove: true
+      police.law.edit: true
+
+  police.*:
+    default: op
+    children:
+      police.baton: true
+      police.stun: true
+      police.sensor: true
+      police.record.*: true
+      police.wanted.*: true
+      police.prison.*: true
+      police.law.*: true
